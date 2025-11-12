@@ -12,17 +12,9 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      packages: read
-      statuses: write
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-          persist-credentials: false
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a28c95de5b
 
       - name: Super-linter
         uses: super-linter/super-linter@v8.2.1
